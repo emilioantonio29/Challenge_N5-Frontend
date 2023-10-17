@@ -27,7 +27,6 @@ const LoginContainer = () => {
             }else{
 
                 setLoader(true);
-                localStorage.clear();
 
                 let res = await login(email, password);
 

@@ -39,3 +39,21 @@ export const login = async (username, password) => {
     }
 
 }
+
+export const getPermissions = async () => {
+
+    try {
+        const data = await axios({
+            method: "GET",
+            url: environment+process.env.REACT_APP_API_ENDPOINT_GETPERMISSIONS,
+            headers:{
+                "Content-Type": "application/json",
+                "Accept-Encoding": "gzip, deflate, br"
+            }
+        })
+        return data
+    } catch (err) {
+        return err;
+    }
+
+}
