@@ -6,23 +6,31 @@ const PermissionTableComponent = (props) => {
     return (
         <>
             {props.permissions?
-                <table className="table">
+                <table className="">
                     <thead>
                         <tr>
-                            <th scope="w-10">#</th>
-                            <th scope="w-30">Name</th>
-                            <th scope="w-30">Lastname</th>
-                            <th scope="w-30">&nbsp; Detail</th>
+                            <td scope="">
+                                <h5 className="color-font-main" style={{alignText: "center", fontWeight: "bold"}}>#</h5>
+                            </td>
+                            <td scope="">
+                                <h5 className="color-font-main" style={{alignText: "center", fontWeight: "bold"}}>Name</h5>
+                            </td>
+                            <td scope="">
+                                <h5 className="color-font-main" style={{alignText: "center", fontWeight: "bold"}}>Lastname</h5>
+                            </td>
+                            <td scope="">
+                                <h5 className="color-font-main" style={{alignText: "center", fontWeight: "bold"}}>Action</h5>
+                            </td>
                         </tr>
                     </thead>
                     <tbody className="table-group-divider">
                         {props.permissions.map((data, index)=>{
                             return(
                                 <tr key={index}>
-                                    <th scope="w-10">{data.id}</th>
-                                    <th scope="w-30">{data.name}</th>
-                                    <th scope="w-30">{data.lastname}</th>
-                                    <th scope="w-30"><DrawerComponent permission={data}/></th>
+                                    <td scope="">{data.id}</td>
+                                    <td scope="">{data.name}</td>
+                                    <td scope="">{data.lastname}</td>
+                                    <td scope=""><DrawerComponent permission={data}/></td>
                                 </tr>
                             )})
                         }

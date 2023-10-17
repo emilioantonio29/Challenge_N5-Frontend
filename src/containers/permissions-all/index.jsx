@@ -4,6 +4,7 @@ import { getPermissions } from "../../utils/hooks/general-axios";
 import DrawerComponent from "../../components/user/bottom-drawer";
 import PermissionTableComponent from "../../components/user/permission-table";
 import { UserGlobalContextMemorySpace } from "../../contexts/user-context";
+import CommonSpacer from "../../components/common/spacer";
 
 const PermissionsAllContainer = () => {
 
@@ -49,6 +50,7 @@ const PermissionsAllContainer = () => {
                 {permissions ?
                     <>
                         <PermissionTableComponent permissions={permissions}/>
+                        <CommonSpacer marginBottom="3vh"/>
                     </>
                     :
                     <h6 style={{color: "white", textAlign: "center"}}>{errorMsg}</h6>

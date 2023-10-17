@@ -3,6 +3,7 @@ import CommonLoader from "../../components/common/loader";
 import { getPermissionsBySearchValue } from "../../utils/hooks/general-axios";
 import PermissionTableComponent from "../../components/user/permission-table";
 import { UserGlobalContextMemorySpace } from "../../contexts/user-context";
+import CommonSpacer from "../../components/common/spacer";
 
 const PermissionsSearchContainer = () => {
 
@@ -65,6 +66,7 @@ const PermissionsSearchContainer = () => {
         {permissions ?
             <>
                 <PermissionTableComponent permissions={permissions}/>
+                <CommonSpacer marginBottom="3vh"/>
             </>
             :
             <h6 style={{color: "white", textAlign: "center"}}>{errorMsg}</h6>
