@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import CommonLoader from "../../components/common/loader";
 import { getPermissions } from "../../utils/hooks/general-axios";
 import DrawerComponent from "../../components/user/bottom-drawer";
 import PermissionTableComponent from "../../components/user/permission-table";
+import { UserGlobalContextMemorySpace } from "../../contexts/user-context";
 
 const PermissionsAllContainer = () => {
+
+    const {fireSearch, setFireSearch} = useContext(UserGlobalContextMemorySpace);
+
     const [loader, setLoader] = useState(false);
     const [permissions, setPermissions] = useState(null);
     const [errorMsg, setErrorMsg] = useState("");
@@ -34,7 +38,7 @@ const PermissionsAllContainer = () => {
         return () => {
         //Unmount
         };
-    }, []);
+    }, [fireSearch]);
 
   return (
     <>

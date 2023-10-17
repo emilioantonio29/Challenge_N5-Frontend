@@ -10,7 +10,7 @@ import Swal from "sweetalert2";
 
 const UpdatePermissionContainer = ({permission}) => {
 
-    const {user, setUser} = useContext(UserGlobalContextMemorySpace);
+    const {fireSearch, setFireSearch} = useContext(UserGlobalContextMemorySpace);
     const [selectedOption, setSelectedOption] = useState(null);
     const [data, setData] = useState([{id:1}, {id:2}]);
 
@@ -34,6 +34,8 @@ const UpdatePermissionContainer = ({permission}) => {
 
             if(res?.status == 201 && res.data){
 
+                setFireSearch(!fireSearch);
+                
                 Swal.fire({
                     icon: 'success',
                     title: 'Your work has been saved',

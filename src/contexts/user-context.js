@@ -7,6 +7,7 @@ export const UserGlobalContext = ({children}) =>{
 
     const [user, setUser] = useState(null);
     const [mainLoader, setMainLoader] = useState(true);
+    const [fireSearch, setFireSearch] = useState(false);
 
     const logout = () =>{
         setUser(null);
@@ -30,7 +31,8 @@ export const UserGlobalContext = ({children}) =>{
                 {
                     user, setUser, 
                     mainLoader, setMainLoader,
-                    logout
+                    logout,
+                    fireSearch, setFireSearch
                 }}>
             {children}
         </UserGlobalContextMemorySpace.Provider>
