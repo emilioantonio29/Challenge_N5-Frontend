@@ -19,15 +19,15 @@ const NavbarComponent = () => {
             </div>
             <div className="navbar-collapse center-box" id="navbarText" >
                 <ul className="navbar-nav ">
-                <li className="nav-item">
-                    <NavLink to="/home" className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact="true" activeclassname="link-active">Home</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to={`/permission`} className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact="true" activeclassname="link-active">Permission</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to={`/permission-search`} className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact="true" activeclassname="link-active">Search</NavLink>
-                </li>
+                    <li className="nav-item">
+                        <NavLink to="/home" className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact="true" activeclassname="link-active">Home</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to={`/permission-search`} className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact="true" activeclassname="link-active">Search</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to={`/permission-types`} className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact="true" activeclassname="link-active">Types</NavLink>
+                    </li>
                 </ul>
             </div>
             <div className="navbar-collapse center-box" id="navbarText" style={{width: "100%"}}>

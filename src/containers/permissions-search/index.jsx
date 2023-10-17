@@ -37,8 +37,9 @@ const PermissionsSearchContainer = () => {
 
         setPermissions(null);
 
-
-        searchPermissions();
+        if(searchValue){
+            searchPermissions();
+        }
 
         return () => {
         //Unmount

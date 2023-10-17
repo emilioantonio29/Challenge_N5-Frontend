@@ -28,8 +28,7 @@ export const login = async (username, password) => {
             method: "POST",
             url: environment+process.env.REACT_APP_API_ENDPOINT_LOGIN,
             headers:{
-                "Content-Type": "application/json",
-                "Accept-Encoding": "gzip, deflate, br"
+                "Content-Type": "application/json"
             },
             data: body
         })
@@ -47,8 +46,7 @@ export const getPermissions = async () => {
             method: "GET",
             url: environment+process.env.REACT_APP_API_ENDPOINT_GETPERMISSIONS,
             headers:{
-                "Content-Type": "application/json",
-                "Accept-Encoding": "gzip, deflate, br"
+                "Content-Type": "application/json"
             }
         })
         return data
@@ -65,8 +63,49 @@ export const getPermissionsBySearchValue = async (searchValue) => {
             method: "GET",
             url: environment+process.env.REACT_APP_API_ENDPOINT_GETPERMISSIONS_BYSEARCHVALUE+searchValue,
             headers:{
-                "Content-Type": "application/json",
-                "Accept-Encoding": "gzip, deflate, br"
+                "Content-Type": "application/json"
+            }
+        })
+        return data
+    } catch (err) {
+        return err;
+    }
+
+}
+
+export const updatePermission = async (id, name, lastname, permissionTypeId) => {
+
+    let body = {
+        id,
+        name,
+        lastname,
+        permissionTypeId
+    }
+
+    try {
+        const data = await axios({
+            method: "PUT",
+            url: environment+process.env.REACT_APP_API_ENDPOINT_UPDATEPERMISSION,
+            headers:{
+                "Content-Type": "application/json"
+            },
+            data: body
+        })
+        return data
+    } catch (err) {
+        return err;
+    }
+
+}
+
+export const getPermissionTypes = async () => {
+
+    try {
+        const data = await axios({
+            method: "GET",
+            url: environment+process.env.REACT_APP_API_ENDPOINT_GETPERMISSIONTYPES,
+            headers:{
+                "Content-Type": "application/json"
             }
         })
         return data
