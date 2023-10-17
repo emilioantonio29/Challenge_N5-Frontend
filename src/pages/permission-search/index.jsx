@@ -1,9 +1,10 @@
 import React, {useContext} from 'react';
+import PermissionSearchComponent from '../../components/user/permission-search';
 
 const PermissionSearchPage = () => {
 
     return (
-        <h1>PERMISSION SEARCH PAGE</h1>
+        <PermissionSearchComponent/>
     );
 }
 

@@ -36,7 +36,7 @@ export default function DrawerComponent(props) {
                     open={state[anchor]}
                     onClose={toggleDrawer(anchor, false)}
                 >
-                    <div style={{ display: "flex", flexDirection: "column", minHeight: "90vh",}} className="container">
+                    <div style={{ display: "flex", flexDirection: "column", minHeight: "88vh",}} className="container">
                         <Divider style={{ marginTop: "30px" }}>
                             <button className="btn btn-actions" onClick={toggleDrawer(anchor, false)}>
                                 <span style={{ fontWeight: "bold" }}>VOLVER</span>

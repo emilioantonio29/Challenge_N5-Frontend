@@ -57,3 +57,21 @@ export const getPermissions = async () => {
     }
 
 }
+
+export const getPermissionsBySearchValue = async (searchValue) => {
+
+    try {
+        const data = await axios({
+            method: "GET",
+            url: environment+process.env.REACT_APP_API_ENDPOINT_GETPERMISSIONS_BYSEARCHVALUE+searchValue,
+            headers:{
+                "Content-Type": "application/json",
+                "Accept-Encoding": "gzip, deflate, br"
+            }
+        })
+        return data
+    } catch (err) {
+        return err;
+    }
+
+}
