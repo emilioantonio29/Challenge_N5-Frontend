@@ -83,6 +83,10 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
+tr:nth-child(odd) {
+  background-color: rgb(255, 255, 255)
+}
+
 @media (max-width: 600px) {
   table, thead, tbody, th, td, tr {
     display: block;
